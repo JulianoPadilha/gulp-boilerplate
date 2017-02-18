@@ -1,0 +1,23 @@
+{
+  "name": "a2lab",
+  "description": "Aplicação para centralização das apresentações de talks feitas na A2Lab",
+  "main": "index.js",
+  "license": "ISC",
+  "keywords": [
+    "talks",
+    "a2lab",
+    "a2ad"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#^5.0.0",
+    "html5shiv": "^3.7.3"
+  }
+}
