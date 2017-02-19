@@ -20,16 +20,15 @@ var gulp = require('gulp'),
 		gulp.task('copy:html5shiv', function() {
 			return gulp.src(dirs._components+'/html5shiv/dist/html5shiv.js')
 						.pipe(plugins.replace('/*!', '/*'))
-						.pipe(plugins.rename({suffix: 'min.js'}))
+						.pipe(plugins.rename({suffix: '.min'}))
 						.pipe(plugins.uglify())
 						.pipe(gulp.dest(dirs._build+'/js/libs/'));
 		});
 
 		gulp.task('copy:normalize', function() {
-			return gulp.src(dirs._components+'normalize-css/normalize.css')
+			return gulp.src(dirs._components+'/normalize-css/normalize.css')
 						.pipe(plugins.replace('/*!', '/*'))
 						.pipe(plugins.rename('normalize.scss'))
-						.pipe(plugins.uglify())
 						.pipe(gulp.dest(dirs._assets+'/scss/base'));
 		});
 
@@ -55,13 +54,9 @@ var gulp = require('gulp'),
 				return gulp.src(dirs._assets+'/scss/main.scss')
 							.pipe(plugins.rename({suffix: '.min'}))
 							.pipe(plugins.sass({
-								trace: true,
-								noCache: true,
-								style: 'compressed'
+								outputStyle: 'compressed'
 							}))
-							.on('error', function(err) {
-								console.log(err.message);
-							})
+							.on(plugins.sass(), plugins.sass.logError)
 							.pipe(gulp.dest(dirs._build+'/css'))
 							.pipe(plugins.livereload())
 							.pipe(reload({stream: true}));
