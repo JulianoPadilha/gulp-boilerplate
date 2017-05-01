@@ -1,15 +1,15 @@
 {
-  "name": "a2lab",
+  "name": "gulp-boilerplate",
   "version": "0.1.0",
-  "description": "Aplicação para centralização das apresentações de talks feitas na A2Lab",
+  "description": "A boilerplate to create new projects using gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "talks",
-    "a2lab",
-    "a2ad"
+    "gulp",
+    "boilerplate",
+    "taskrunner"
   ],
   "author": "",
   "license": "ISC",

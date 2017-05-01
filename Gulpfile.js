@@ -29,7 +29,7 @@ var gulp = require('gulp'),
 			return gulp.src(dirs._components+'/normalize-css/normalize.css')
 						.pipe(plugins.replace('/*!', '/*'))
 						.pipe(plugins.rename('normalize.scss'))
-						.pipe(gulp.dest(dirs._assets+'/scss/base'));
+						.pipe(gulp.dest(dirs._assets+'/scss/3.generic'));
 		});
 
 	// IMAGES ==================================================
